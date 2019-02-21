@@ -69,7 +69,7 @@ app.delete('/todos/:id', (request, response) => {
       return response.status(404).send();
     }
 
-    response.send(todo);
+    response.send({todo});
   }).catch((e) => {
     response.status(400).send();
   });
